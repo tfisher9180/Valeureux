@@ -1,0 +1,40 @@
+#mobile-menu {
+  position: fixed;
+  visibility: hidden;
+  height: 100vh;
+  width: $mobile-menu-width;
+  top: 0;
+  right: 0;
+  transition: visibility 0s $mobile-menu-transition-time, transform $mobile-menu-transition-timing;
+  transform: translate3d($mobile-menu-width, 0, 0);
+  background: $theme-banner;
+  z-index: 100;
+
+  .mobile-menu-open & {
+    visibility: visible;
+    transition: visibility 0s 0s, transform $mobile-menu-transition-timing;
+    transform: translate3d(0,0,0);
+  }
+
+  .nav {
+    padding: 20px 0;
+
+    a {
+      padding: 7px 45px 7px 30px;
+      margin-right: 70px;
+    }
+
+    .dropdown-toggled a {
+      color: $theme-links;
+    }
+
+    .dropdown-menu a {
+      color: $theme-gray;
+      padding-left: 45px;
+    }
+  }
+
+  @media only screen and (min-width: $device-xl) {
+    display: none;
+  }
+}

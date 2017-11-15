@@ -1,0 +1,6 @@
+node_modules
+build/scripts
+build/css
+build/fonts
+src
+npm-debug.log

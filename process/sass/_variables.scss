@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700|Playfair+Display:400,700,900|Montserrat:300,400,700');
+
+$device-xs: 540px;
+$device-sm: 600px;
+$device-md: 767px;
+$device-lg: 950px;
+$device-xl: 1024px;
+$device-xxl: 1360px;
+
+$font-main: 'Lora', sans-serif;
+$font-headings: 'Playfair Display', sans-serif;
+$font-navigation: 'Montserrat', sans-serif;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+$font-weight-black: 900;
+
+$theme-text: #333;
+$theme-navbar: #212121;
+$theme-banner: #2e2e2e;
+$theme-off-white: #f4f4f4;
+$theme-links: #fdf58c;
+$theme-gray: #979797;
+$theme-meta-gray: #767676;
+$theme-search: #252531;
+$theme-dark-border: #2d2d2d;
+$theme-primary: #faf6c1;
+
+$mobile-menu-width: 240px;
+$mobile-menu-transition-time: 0.25s;
+$mobile-menu-transition-timing: $mobile-menu-transition-time linear;
+
+$dropdown-toggle-transition-time: 0.3s;
+$dropdown-toggle-transition-timing: $dropdown-toggle-transition-time ease-in-out;
+
+$navbar-height: 73px;
+$banner-height: calc(100vh - #{$navbar-height});
+$banner-blog-height: 350px;
+
+$content-width: 66.66667%;
+$sidebar-width: 33.33333%;

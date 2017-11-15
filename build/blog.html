@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Valeureux | Salon Theme</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body class="archive">
+
+    <nav id="mobile-menu">
+      <ul class="nav">
+        <li><a href="#">Home</a></li>
+        <li class="has-dropdown">
+          <a href="#">Services</a>
+          <span class="dropdown-toggle"></span>
+          <ul class="dropdown-menu">
+            <li><a href="#">Hair Styling</a></li>
+            <li><a href="#">Nail Care</a></li>
+            <li><a href="#">Makeup &amp; Beauty</a></li>
+            <li><a href="#">Consultation</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div id="page">
+
+      <header class="site-header">
+        <nav class="navbar">
+          <div class="container">
+            <div class="logo">
+              <a href="index.html">
+                <img src="images/logo.svg" alt="" />
+              </a>
+            </div>
+            <div class="navbar-menu-wrapper">
+              <div class="toggle-menu">
+                <a href="#" class="search-toggle">
+                  <span class="fa fa-search"></span>
+                </a>
+                <a href="#" class="menu-toggle">
+                  <span class="menu-toggle-icon"></span>
+                </a>
+              </div>
+              <nav id="site-menu">
+                <ul class="nav">
+                  <li><a href="#">Home</a></li>
+                  <li class="has-dropdown">
+                    <a href="#">Services</a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Hair Styling</a></li>
+                      <li><a href="#">Nail Care</a></li>
+                      <li><a href="#">Makeup &amp; Beauty</a></li>
+                      <li><a href="#">Consultation</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div id="searchbar">
+            <div class="container">
+              <form role="search" method="get" action="">
+                <input name="s" placeholder="Search..." onfocus="if (placeholder == 'Search...') {placeholder = '';}" onblur="if (placeholder == '') {placeholder = 'Search...';}" value type="search" />
+                <button type="button" class="cancel"></button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="site-main">
+
+        <header class="banner bg-cover" style="background-image: url('images/banner.jpg');">
+          <div class="container">
+            <div class="page-title-box">
+              <h1 class="page-title">Hair &amp; Beauty Blog</h1>
+              <div class="tags">
+                <p class="line-one">Hair Styling | Nailcare | Makeup &amp; Beauty</p>
+                <p class="line-two">11/15/2017</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="content-area">
+          <div class="container">
+            <div class="content">
+              <div class="posts">
+                <article class="post">
+                  <figure class="featured-image">
+                    <a href="#">
+                      <img src="images/posts/post-1.jpg" alt="" />
+                    </a>
+                  </figure>
+                  <div class="post-content">
+                    <div class="entry-meta">
+                      <a href="#">Hair Care</a>
+                      <span> - November 15, 2017</span>
+                    </div>
+                    <h3 class="entry-title">
+                      <a href="#">7 Steps to Blow Drying Hair</a>
+                    </h3>
+                    <div class="entry-content">
+                      <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    </div>
+                    <footer class="post-links">
+                      <a href="#" class="post-footer-link"><i class="fa fa-book"></i></a>
+                      <a href="#" class="post-footer-link"><i class="fa fa-retweet"></i></a>
+                    </footer>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <aside class="sidebar">
+              Hello
+            </aside>
+          </div>
+        </div>
+
+      </main>
+
+    </div>
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </body>
+</html>

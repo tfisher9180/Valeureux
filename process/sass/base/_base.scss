@@ -1,0 +1,247 @@
+@import "normalize";
+@import "reset";
+
+html {
+  height: 100%;
+}
+
+body,
+.site-main {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(#000, 0.6);
+    opacity: 0;
+  }
+}
+
+body {
+  font-family: $font-main;
+  font-weight: $font-weight-normal;
+  color: $theme-text;
+  line-height: 1;
+  min-height: 100%;
+
+  &:before {
+    transition: opacity $mobile-menu-transition-timing;
+  }
+
+  &.mobile-menu-open {
+
+    &:before {
+      z-index: 99;
+      opacity: 1;
+    }
+  }
+}
+
+.site-main {
+
+  &:before {
+    transition: opacity 0.2s;
+    z-index: -1;
+  }
+
+  .search-menu-open & {
+
+    &:before {
+      opacity: 1;
+      z-index: 99;
+    }
+  }
+}
+
+#page {
+  position: relative;
+  transition: transform $mobile-menu-transition-timing;
+  transform: translate3d(0,0,0);
+
+  .mobile-menu-open & {
+    transform: translate3d(-$mobile-menu-width, 0, 0);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  margin: 0 auto;
+  max-width: 75rem;
+}
+
+input,
+button {
+  font-family: $font-navigation;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  transition: color 0.2s ease-in-out;
+  text-decoration: none;
+  color: $theme-banner;
+
+  &:visited {
+    color: $theme-banner;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    outline: 0;
+  }
+}
+
+.bg-cover {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-headings;
+  font-weight: $font-weight-normal;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+h1 {
+  font-size: 22px;
+  line-height: 30px;
+
+  @media only screen and (min-width: $device-xs) {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  @media only screen and (min-width: $device-sm) {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  @media only screen and (min-width: $device-md) {
+    font-size: 52px;
+    line-height: 60px;
+  }
+
+  @media only screen and (min-width: $device-lg) {
+    font-size: 72px;
+    line-height: 80px;
+  }
+}
+
+.nav {
+  font-family: $font-navigation;
+  letter-spacing: 0.1em;
+  list-style: none;
+
+  ul {
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+
+    &.focus,
+    &:hover {
+
+      > a {
+        color: $theme-links;
+      }
+    }
+  }
+
+  a {
+    color: #fff;
+    position: relative;
+    font-size: 13px;
+    font-weight: $font-weight-light;
+    display: block;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 0.1em;
+
+    &:focus,
+    &.focus,
+    &:hover {
+      color: $theme-links;
+    }
+
+    @media only screen and (min-width: $device-xl) {
+      font-size: 10px;
+    }
+
+    @media only screen and (min-width: $device-xxl) {
+      font-size: 12px;
+    }
+  }
+
+  li.has-dropdown {
+
+    .dropdown-toggle {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 7px;
+      right: 30px;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        width: 8px;
+        background: #fff;
+        transition: transform $dropdown-toggle-transition-timing;
+      }
+
+      &:after {
+        transform: rotate(-90deg);
+      }
+    }
+
+    &.dropdown-toggled {
+
+      .dropdown-toggle:after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    display: none;
+
+    a {
+      line-height: 24px;
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: #fff!important;
+      }
+
+      a {
+        text-transform: none;
+      }
+    }
+  }
+}

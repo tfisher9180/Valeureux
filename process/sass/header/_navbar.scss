@@ -1,0 +1,166 @@
+.navbar {
+  background-color: $theme-navbar;
+
+  .container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+
+    @media only screen and (min-width: $device-xl) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .navbar-menu-wrapper,
+  .toggle-menu,
+  .toggle-menu .menu-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    width: 210px;
+
+    a {
+      display: block;
+    }
+
+    @media only screen and (min-width: $device-xl) {
+      width: 190px;
+    }
+  }
+
+  .toggle-menu {
+    color: $theme-off-white;
+
+    .menu-toggle {
+      width: 26px;
+      height: 26px;
+
+      .menu-toggle-icon,
+      .menu-toggle-icon:before,
+      .menu-toggle-icon:after {
+        display: block;
+        height: 2px;
+        background: $theme-off-white;
+      }
+
+      .menu-toggle-icon {
+        position: relative;
+        margin: 0 auto;
+        width: 80%;
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          left: 0;
+        }
+
+        &:before {
+          top: -6px;
+        }
+
+        &:after {
+          top: 6px;
+        }
+      }
+
+      @media only screen and (min-width: $device-xl) {
+        display: none;
+      }
+    }
+
+    .search-toggle {
+      margin: 0 10px 0 0;
+
+      @media only screen and (min-width: $device-md) {
+        margin: 0 20px 0 0;
+      }
+    }
+
+    a {
+      color: inherit;
+    }
+
+    @media only screen and (min-width: $device-xl) {
+      border-right: 1px solid $theme-dark-border;
+
+      a {
+        padding: 26px 19px 26px 19px;
+        line-height: 20px;
+      }
+    }
+  }
+
+  #searchbar {
+    background: $theme-search;
+    display: none;
+
+    form,
+    input {
+      position: relative;
+      width: 100%;
+    }
+
+    input {
+      color: #fff;
+      letter-spacing: 0.1em;
+      height: 50px;
+      background: none;
+      border: 0;
+
+      &::-webkit-input-placeholder,
+      &:-moz-placeholder,
+      &::-moz-placeholder,
+      &:-ms-input-placeholder {
+        color: #fff;
+      }
+
+      @media only screen and (min-width: $device-xl) {
+        height: 80px;
+      }
+    }
+
+    .cancel {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      display: block;
+      width: 18px;
+      height: 18px;
+      background: none;
+      border: 0;
+      padding: 0;
+
+      &:before,
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: #fff;
+      }
+
+      &:before {
+        transform: rotate(45deg);
+      }
+
+      &:after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  @media only screen and (min-width: $device-xl) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
